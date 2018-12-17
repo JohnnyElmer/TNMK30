@@ -9,71 +9,67 @@ html{
 }
 
 body{
-	background-color: RGB(128, 0, 0);
+	background-color: RGB(0, 150, 0);
 	margin:0px;
 	height:100%;
 }
 
+#container{
+	text-align:center;
+	width: 100%;
+	background-color: RGB(180, 0, 0);
+	border: solid 5px rgb(150,0,0);
+
+}
+
 #logo{
 	text-align: center;
-	border-style:solid;
-	border-width:5px;
-	border-color:green;
-	
-	background-color: rgb(128, 0, 0);
-	width: 200px;
+	border: solid 5px rgb(130,0,0);
+	background-color: RGB(180, 0, 0);
 	display:inline-block;
-	
+	margin: 10px;
 }
 
 #searchbar{
+	border: solid 5px green;
 	text-align: center;
-	border-style:solid;
-	border-width:5px;
-	border-color:green;
-	
-	background-color: rgb(50,50,50);
+	background-color: rgb(0,150,0);
 	padding:2.5%;
-	
 }
 
 #tabelldiv{
-	border-style:solid;
-	border-width:5px;
-	border-color:pink;
+	
+	border: solid 5px rgb(180,180,180);
 	text-align:center;
-	background-color:grey;
+	background-color: rgb(200,200,200);
 	min-height:71.5%;  !<--84.5%-->
 }
 
 #tabellinneholl
 {
-	background-color:rgb(200,200,200);
+	background-color:rgb(180,180,180);
 	display:inline-block;
 }
 
 #sidfot{
-	border-style:solid;
-	border-width:5px;
-	border-color:black;
-	
-	padding:2.5%;
-	background-color:rgb(128,0,0);
+	border: solid 5px rgb(150,0,0);
+	padding:1.8%;
+	background-color:rgb(180,0,0);
 	position:fixed;
 	bottom:0;
 	right:0;
 	left:0;
 }
-
-
 .cirkeldiv
 {
 	  height:100px;
 	  width:100px;
-
+	  float: left;
       border-radius: 50%;
-      background: red;
+      background:  rgb(0,150,0);
 	  text-align:center;
 	  display:table-cell;
 	  vertical-align:middle;
+	  margin: 10px;
+	  border: solid green 5px;
 }
