@@ -65,3 +65,16 @@ body{
 	right:0;
 	left:0;
 }
+
+
+.cirkeldiv
+{
+	  height:100px;
+	  width:100px;
+
+      border-radius: 50%;
+      background: red;
+	  text-align:center;
+	  display:table-cell;
+	  vertical-align:middle;
+}
