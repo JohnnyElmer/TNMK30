@@ -1,5 +1,3 @@
-<!doctype html>
-<html>
 <?php
 // Anslut til LEGOdatabasen 
  $conn = mysqli_connect("mysql.itn.liu.se","lego","","lego");
@@ -8,20 +6,26 @@
  }
 	
 $SetID =  $_GET['set'];
-	
- // Fråga efter delarna hämtar ut dem
- $contents = mysqli_query($conn, "SELECT inventory.Quantity, inventory.ItemTypeID, inventory.ItemID,
- 				inventory.ColorID, colors.Colorname, parts.Partname, sets.Setname, 
-				FROM inventory, parts, colors 
-				WHERE inventory.SetID='$SetID'
-				OR sets.Setname= '$SetID'
+
+$query= "SELECT * FROM inventory LIMIT 10";
+/*$query="SELECT inventory.Quantity, inventory.ItemTypeID, inventory.ItemID,
+ 				inventory.ColorID, colors.Colorname, parts.Partname, sets.Setname 
+				FROM inventory, parts, colors,sets 
+				WHERE inventory.SetID='%".$SetID."%'
+				OR sets.Setname= '%".$SetID."%'
 				AND inventory.ItemTypeID='P' 
 				AND inventory.ItemID=parts.PartID 
-				AND inventory.ColorID=colors.ColorID");
-	
+				AND inventory.ColorID=colors.ColorID 
+				LIMIT 10";*/
+ // Fråga efter delarna hämtar ut dem
+ 
+ $contents = mysqli_query($conn, $query);
+	echo $query;
+    echo "antal rader ".mysqli_num_rows($contents);
  if(mysqli_num_rows($contents) == 0) {
   print("<p>No parts in inventory for this set.</p>\n");
  } 
+
 else {
  
 // Skriver ut tabell 
@@ -69,6 +73,4 @@ else {
   }
   print("</table>\n");
  }
-
 ?>
-  </html>

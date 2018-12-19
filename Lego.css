@@ -18,7 +18,6 @@ body{
 	text-align:center;
 	width: 100%;
 	background-color: RGB(180, 0, 0);
-	box-sizing: border-box;
 	border: solid 5px rgb(150,0,0);
 
 }
@@ -39,7 +38,7 @@ body{
 }
 
 #tabelldiv{
-	box-sizing: border-box;
+	
 	border: solid 5px rgb(180,180,180);
 	text-align:center;
 	background-color: rgb(200,200,200);
