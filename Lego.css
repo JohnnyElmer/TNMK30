@@ -39,7 +39,7 @@ body{
 }
 
 #tabelldiv{
-	
+	box-sizing: border-box;
 	border: solid 5px rgb(180,180,180);
 	text-align:center;
 	background-color: rgb(200,200,200);
