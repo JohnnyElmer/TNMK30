@@ -9,7 +9,7 @@ html{
 }
 
 body{
-	background-color: RGB(0, 150, 0);
+	background-color: RGB(180, 180, 180);
 	margin:0px;
 	height:100%;
 }
@@ -56,7 +56,7 @@ body{
 	border: solid 5px rgb(180,180,180);
 	text-align:center;
 	background-color: rgb(200,200,200);
-	min-height:71.5%;  !<--84.5%-->
+	min-height:71.5%;  
 }
 
 #tabellinneholl
@@ -91,3 +91,28 @@ body{
 .cirkeldiv:hover{
 	background-color:blue;
 }
+* {box-sizing:border-box}
+
+.makers {
+
+	float: left;
+	text-align: center;
+	width: 50%;
+
+}
+
+#ruta{
+	border: solid 5px rgb(180,180,180);
+	background-color: rgb(200,200,200);
+	min-height:71.5%; 
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+
