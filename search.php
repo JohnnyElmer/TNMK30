@@ -7,7 +7,14 @@
 	
 $SetID =  $_GET['set'];
 
-$query= "SELECT * FROM inventory LIMIT 10";
+$query= "SELECT inventory.Quantity, inventory.ItemTypeID, inventory.ItemID, colors.ColorID,colors.Colorname, parts.Partname, sets.Setname 
+		FROM (((parts INNER JOIN inventory ON parts.PartID=inventory.ItemID) 
+		INNER JOIN colors ON colors.ColorID=inventory.ColorID) 
+		INNER JOIN sets 
+		ON sets.SetID=inventory.SetID) 
+		WHERE (inventory.SetID LIKE '%".$SetID."%' OR sets.Setname LIKE '%".$SetID."%') 
+		AND inventory.ItemTypeID='P' 
+		LIMIT 20";
 /*$query="SELECT inventory.Quantity, inventory.ItemTypeID, inventory.ItemID,
  				inventory.ColorID, colors.Colorname, parts.Partname, sets.Setname 
 				FROM inventory, parts, colors,sets 
@@ -53,18 +60,31 @@ else {
    $imagesearch = mysqli_query($conn, "SELECT * FROM images WHERE ItemTypeID='P' AND ItemID='$ItemID' AND ColorID=$ColorID");
   
 // Frågan returnera en rad 
-   $imageinfo = mysqli_fetch_array($imagesearch);
-  
+   $imageinfo = mysqli_fetch_array($imagesearch);  
+   $hasimg=FALSE;
+	  
    if($imageinfo['has_jpg']) { // Använd JPG om den finns
 	 $filename = "P/$ColorID/$ItemID.jpg";
-   } else if($imageinfo['has_gif']) { // Använd GIF om JPG inte tillgägligt 
+	 $hasimg=TRUE;
+   }
+   else if($imageinfo['has_gif'])
+   { // Använd GIF om JPG inte tillgägligt 
+	 $hasimg=TRUE;
 	 $filename = "P/$ColorID/$ItemID.gif";
-   } else { // Om ingen format finns skriv ut text 
+   }
+   else
+   { // Om ingen format finns skriv ut text 
+	 $hasimg=FALSE;
 	 $filename = "noimage_small.png";
    }
   
    print("<td>$filename</td>");
-   print("<td><img src=\"$prefix$filename\" alt=\"Part $ItemID\"/></td>");
+   if($hasimg==TRUE)
+	print("<td><img src=\"$prefix$filename\" alt=\"Part $ItemID\"/></td>");
+
+   else
+		print('<td><img src="'.$filename.'" alt="'.$ItemID.'"/></td>');
+
    $Colorname = $row['Colorname'];
    $Partname = $row['Partname'];
    print("<td>$Colorname</td>");
