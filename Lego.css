@@ -19,7 +19,7 @@ body{
 	width: 100%;
 	background-color: RGB(180, 0, 0);
 	border: solid 5px rgb(150,0,0);
-
+	box-sizing: border-box;
 }
 
 #logo{
@@ -28,6 +28,20 @@ body{
 	background-color: RGB(180, 0, 0);
 	display:inline-block;
 	margin: 10px;
+}
+
+#logo
+{
+	text-align: center;
+	border: solid 5px rgb(130,0,0);
+	background-color: RGB(180, 0, 0);
+	display:inline-block;
+	margin: 10px;
+}
+
+#logo:hover
+{
+	background-color:blue;
 }
 
 #searchbar{
@@ -72,4 +86,8 @@ body{
 	  vertical-align:middle;
 	  margin: 10px;
 	  border: solid green 5px;
+}
+
+.cirkeldiv:hover{
+	background-color:blue;
 }
