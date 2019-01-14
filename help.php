@@ -17,15 +17,12 @@
 </div>
 
 <div id="searchbar">
-	<form action="search.php"  method="GET">
-		<input type="text" name="set" placeholder="Sök efter legosatser..."/>
-		<input type="hidden" value="0" name="offset"/>
-	</form>
+	<?php include 'formuler.php'; ?>
 	
 </div>
 <div> <a href="search.php"></a>
 </div >
-<div id="tabelldiv">
+
 <div id="instruktioner">
 	<h2>Såhär funkar sökfunktionen</h2>
 		<p>Klicka på sökrutan och skriv in antingen ett namn på en sats (bokstäver)
@@ -42,7 +39,7 @@
 		<p>Vi hoppas att du hittar vad du letar efter, lycka till!</p>
  
 </div>
-</div>
+
 
 
 
@@ -50,22 +47,7 @@
 
 <div id="sidfot">
 	
-	
-	
-	<a href ="skaparna.html" style="display:block;">
-	<div class="cirkeldiv" >
-		<p id="Skaparna"><br>Skaparna</p> 
-	</div>
-	</a>
-	
-	<a href="help.html" style="display:block;">
-	<div class="cirkeldiv" >
-		<p id="Sökhjälp"><br>Sökhjälp</p>
-	</div>
-	</a>
-	
-	
-	
+<?php include 'sidfot.php'; ?>
 	
 </div>
 </body>
