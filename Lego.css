@@ -115,3 +115,12 @@ img.makers {
 	min-height:90%; 
 	margin: auto;
 }
+
+#instruktioner
+{
+	text-align: center;
+	color: midnightblue;
+	margin: 100px;
+	font-size: 20px;
+	
+}
