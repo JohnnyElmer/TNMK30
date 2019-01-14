@@ -126,8 +126,8 @@ $totalt=mysqli_num_rows($contents);
 	 
 }
 
-$linkprevious="http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset-$lim);
-$linknext="http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset+$lim);
+$linkprevious="http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&antal=".$lim."&offset=".($offset-$lim);
+$linknext="http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&antal=".$lim."&offset=".($offset+$lim);
 ?>
 
 
