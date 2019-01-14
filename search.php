@@ -19,16 +19,16 @@ if($offset<0)
 $SetID =  $_GET['set'];
 $originalsokning=$SetID;
 if($SetID!="")
-{	/*
-	$rekne_query= "SELECT COUNT(*) AS totalt  
+{	
+	$enframot_query= "SELECT inventory.Quantity, inventory.ItemTypeID, inventory.ItemID, inventory.SetID, colors.ColorID,colors.Colorname, parts.Partname, sets.Setname  
 			FROM (((parts INNER JOIN inventory ON parts.PartID=inventory.ItemID) 
 			INNER JOIN colors ON colors.ColorID=inventory.ColorID) 
 			INNER JOIN sets 
 			ON sets.SetID=inventory.SetID) 
 			WHERE (inventory.SetID LIKE '%".$SetID."%' OR sets.Setname LIKE '%".$SetID."%') 
-			AND inventory.ItemTypeID='P'";	
+			AND inventory.ItemTypeID='P' 
+			LIMIT ".($offset+$lim).",1";
 
-*/
 	$query= "SELECT inventory.Quantity, inventory.ItemTypeID, inventory.ItemID, inventory.SetID, colors.ColorID,colors.Colorname, parts.Partname, sets.Setname  
 			FROM (((parts INNER JOIN inventory ON parts.PartID=inventory.ItemID) 
 			INNER JOIN colors ON colors.ColorID=inventory.ColorID) 
@@ -36,17 +36,16 @@ if($SetID!="")
 			ON sets.SetID=inventory.SetID) 
 			WHERE (inventory.SetID LIKE '%".$SetID."%' OR sets.Setname LIKE '%".$SetID."%') 
 			AND inventory.ItemTypeID='P' 
-			LIMIT ".$offset.",".($lim+1);
+			LIMIT ".$offset.",".$lim;
 			
 	 
-	$contents = mysqli_query($conn, $query);	
-	//$rekne_resultat=mysqli_query($conn, $rekne_query);
+	$contents = mysqli_query($conn, $query);
+	$harnesta=mysqli_query($conn, $enframot_query);
 	
-
+$harmer=mysqli_num_rows($harnesta);
 $totalt=mysqli_num_rows($contents);
 
-	echo "Visar resultat nummer ".$offset." till ".($offset+$totalt).".";
-
+	echo "Visar resultat nummer ".$offset." till ".($offset+$totalt).". Har nästa: ".$harmer;
 
 	
 	 if($totalt == 0)
@@ -122,13 +121,13 @@ $totalt=mysqli_num_rows($contents);
 	 
 }
 
-$linkprevious="http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset-20);
-$linknext="http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset+20);
+$linkprevious="http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset-$lim);
+$linknext="http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset+$lim);
 ?>
 
 
 <button onclick="window.location.href = '<?PHP echo $linkprevious; ?>';" <?PHP if($offset<=0) echo "disabled" ?>>Föregående</button>
-<button onclick="window.location.href = '<?PHP echo $linknext; ?>';" <?PHP if($totalt<$lim) echo "disabled" ?>>Nästa</button>
+<button onclick="window.location.href = '<?PHP echo $linknext; ?>';" <?PHP if($harmer<1) echo "disabled" ?>>Nästa</button>
 
 
 
