@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="container">
-<a href="hem.html">
+<a href="hem.php">
 	<div id="logo">
 		<h1>LEGO-Databasen</h1>
 	</div>
@@ -17,8 +17,9 @@
 </div>
 
 <div id="searchbar">
-	<form  method="GET">
+	<form action="search.php"  method="GET">
 		<input type="text" name="set" placeholder="Sök efter legosatser..."/>
+		<input type="hidden" value="0" name="offset"/>
 	</form>
 </div>
 <div id="tabelldiv">
@@ -35,14 +36,18 @@
 <div id="sidfot">
 	
 	
-	<div class="cirkeldiv" onclick="skaparna()">
+	<div class="cirkeldiv" >
+	<a href ="skaparna.html">
 		<p id="Skaparna"><br>Skaparna</p> 
+	</a>
 	</div>
 	
 	
 	
-	<div class="cirkeldiv" onclick="sökhjälp()">
+	<div class="cirkeldiv" >
+	<a href="help.html">
 		<p id="Sökhjälp"><br>Sökhjälp</p>
+	</a>
 	</div>
 	
 	
