@@ -32,20 +32,7 @@
 
 <div id="sidfot">
 	
-	
-	
-	<a href ="skaparna.html" style="display:block;">
-	<div class="cirkeldiv" >
-		<p id="Skaparna"><br>Skaparna</p> 
-	</div>
-	</a>
-	
-	<a href="help.html" style="display:block;">
-	<div class="cirkeldiv" >
-		<p id="Sökhjälp"><br>Sökhjälp</p>
-	</div>
-	</a>
-	
+	<?php include 'sidfot.php'; ?>
 	
 	
 	
