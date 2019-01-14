@@ -17,10 +17,7 @@
 </div>
 
 <div id="searchbar">
-	<form action="search.php"  method="GET">
-		<input type="text" name="set" placeholder="Sök efter legosatser..."/>
-		<input type="hidden" value="0" name="offset"/>
-	</form>
+	<?php include 'formuler.php'; ?>
 </div>
 <div id="tabelldiv">
 	<p>Lego är det bästa jag vet.</p>
