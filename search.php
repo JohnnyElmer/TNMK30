@@ -2,13 +2,18 @@
 <?php
 	
 $offset= $_GET['offset'];
-$lim=5;
+$lim=$_GET['antal'];
 $totalt=0;
 
 if($offset<0)
 {
-	
+	$offset=0;
 }
+	
+if($lim<1 || $lim=="")
+{	
+		$lim=5;
+}	
 	
 // Anslut til LEGOdatabasen 
  $conn = mysqli_connect("mysql.itn.liu.se","lego","","lego");
@@ -126,7 +131,7 @@ $linknext="http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$origin
 ?>
 
 
-<button onclick="window.location.href = '<?PHP echo $linkprevious; ?>';" <?PHP if($offset<=0) echo "disabled" ?>>Föregående</button>
+<button onclick="window.location.href = '<?PHP echo $linkprevious; ?>';" <?PHP if($offset<=0 || ($offset-$lim) <0) echo "disabled" ?>>Föregående</button>
 <button onclick="window.location.href = '<?PHP echo $linknext; ?>';" <?PHP if($harmer<1) echo "disabled" ?>>Nästa</button>
 
 
