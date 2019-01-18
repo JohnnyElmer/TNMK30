@@ -27,13 +27,13 @@
 	
 	
 	
-	<a href ="skaparna.html" style="display:block;">
+	<a href ="skaparna.php" style="display:block;">
 	<div class="cirkeldiv" >
 		<p id="Skaparna"><br>Skaparna</p> 
 	</div>
 	</a>
 	
-	<a href="help.html" style="display:block;">
+	<a href="help.php" style="display:block;">
 	<div class="cirkeldiv" >
 		<p id="Sökhjälp"><br>Sökhjälp</p>
 	</div>
