@@ -99,7 +99,9 @@ body{
 	float: left;
 	text-align: center;
 	width: 50%;
-    
+    	margin-left: auto;
+	margin-right: auto;
+	display: block;
 
     
 }
@@ -114,6 +116,10 @@ img.makers {
 	background-color: rgb(200,200,200);
 	min-height:90%; 
 	margin: auto;
+	width: 50%;
+	float: left;
+	text-align: center;
+	color: midnightblue;
 }
 
 #instruktioner
@@ -123,4 +129,9 @@ img.makers {
 	margin: 100px;
 	font-size: 20px;
 	
+}
+
+.makerspng{
+	width: 95%;
+	margin-top: 20px;
 }
