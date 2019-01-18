@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="container">
-<a href="hem.php">
+<a href="index.php">
 	<div id="logo">
 		<h1>LEGO-Databasen</h1>
 	</div>
