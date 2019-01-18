@@ -53,10 +53,7 @@ $totalt=mysqli_num_rows($contents);
 		// Skriver ut tabell 
 		  print("<p>Parts in set:</p>");
 		  print("<table>\n<tr>");
-		  print("<th>Quantity</th>");
-		  print("<th>File name</th>");
-		  print("<th>Picture</th>");
-		  print("<th>Color</th>");
+		  print("<th>Bild</th>");
 		  print("<th>Set ID</th>");
 		  print("<th>Set Name</th>");
 		  print "</tr>\n";
@@ -96,7 +93,6 @@ $totalt=mysqli_num_rows($contents);
 				 $filename = "noimage_small.png";
 			   }
 			  
-			   print("<td>$filename</td>");
 			   if($hasimg==TRUE)
 				print("<td><img src=\"$prefix$filename\" alt=\"NO image\"/></td>");
 			   else
