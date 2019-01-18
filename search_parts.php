@@ -30,7 +30,7 @@ if($SetID!="")
 			INNER JOIN colors ON colors.ColorID=inventory.ColorID) 
 			INNER JOIN sets 
 			ON sets.SetID=inventory.SetID) 
-			WHERE (inventory.SetID LIKE '%".$SetID."%' OR sets.Setname LIKE '%".$SetID."%') 
+			WHERE inventory.SetID ='".$SetID."'
 			AND inventory.ItemTypeID='P' 
 			LIMIT ".($offset+$lim).",1";
 
@@ -39,7 +39,7 @@ if($SetID!="")
 			INNER JOIN colors ON colors.ColorID=inventory.ColorID) 
 			INNER JOIN sets 
 			ON sets.SetID=inventory.SetID) 
-			WHERE (inventory.SetID LIKE '%".$SetID."%' OR sets.Setname LIKE '%".$SetID."%') 
+			WHERE inventory.SetID ='".$SetID."'
 			AND inventory.ItemTypeID='P' 
 			LIMIT ".$offset.",".$lim;
 			
@@ -63,22 +63,18 @@ $totalt=mysqli_num_rows($contents);
 		 
 		// Skriver ut tabell 
 		  print("<p>Parts in set:</p>");
-		  print("<table>\n<tr>");
-		  print("<th>Quantity</th>");
-		  print("<th>File name</th>");
-		  print("<th>Picture</th>");
-		  print("<th>Color</th>");
+		  print("<table>\n<tr>");	
+		  print("<th>Picture</th>");		  
 		  print("<th>Set ID</th>");
-		  print("<th>Set Name</th>");
+		  print("<th>Part Name</th>");
+		  print("<th>Quantity</th>");
+		  print("<th>Color</th>");
 		  print "</tr>\n";
 		  
 		
 		// While funktionen som skriver ut i rätt ordning
 		  while($row = mysqli_fetch_array($contents))
 		  {
-			   print("<tr>");
-			   $Quantity = $row['Quantity'];
-			   print("<td>$Quantity</td>");
 			  
 			// Bestäm filnamnet för en bild som är 80x60 pixlar, helst i JPG-format.
 			   $prefix = "http://www.itn.liu.se/~stegu76/img.bricklink.com/";
@@ -108,17 +104,23 @@ $totalt=mysqli_num_rows($contents);
 				 $hasimg=FALSE;
 				 $filename = "noimage_small.png";
 			   }
-			  
-			   print("<td>$filename</td>");
+			  print("<tr>");
 			   if($hasimg==TRUE)
 				print("<td><img src=\"$prefix$filename\" alt=\"Part $ItemID\"/></td>");
 			   else
 					print('<td><img src="'.$filename.'" alt="'.$ItemID.'"/></td>');
 			   $Colorname = $row['Colorname'];
 			   $Partname = $row['Partname'];
-			   print("<td>$Colorname</td>");
+			   
 			   print("<td><a href='http://www.student.itn.liu.se/~linsv482/projekt/sets.php?set=".$SetID."&offset=0'>".$SetID."</a></td>");
-			   print("<td>$SetName</td>");
+			   print("<td>$Partname</td>");
+			   
+			  
+			   $Quantity = $row['Quantity'];
+			   print("<td>$Quantity</td>");
+			   
+			   print("<td>$Colorname</td>");
+
 			   print("</tr>\n");
 		  }
 		  print("</table>\n");
@@ -140,6 +142,6 @@ $linknext="http://www.student.itn.liu.se/~linsv482/projekt/parts.php?set=".$orig
 // print("<a href='http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset-20)."'>Föregående</a>");
  //print("<a href='http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset+20)."'>Nästa</a>");
  
-//header("Location: index.php",true,301);
+//header("Location: hem.php",true,301);
 //exit();	
 ?>
