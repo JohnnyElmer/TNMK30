@@ -69,6 +69,38 @@ $totalt=mysqli_num_rows($contents);
 
 			   $SetID=$row['SetID'];
 			   $SetName=$row['Setname'];
+			   $prefix = "http://www.itn.liu.se/~stegu76/img.bricklink.com/";
+			   
+			   // Fråga databasen för att se vilka filer som finns !
+			   $imagesearch = mysqli_query($conn, "SELECT * FROM images WHERE (ItemTypeID='S' AND ItemID='".$SetID."')");
+			  
+			// Frågan returnera en rad 
+			   $imageinfo = mysqli_fetch_array($imagesearch);  
+			   $hasimg=FALSE;
+				  
+			   
+			   if($imageinfo['has_gif'] !=0)
+			   { // Använd GIF om JPG inte tillgägligt 
+				 $hasimg=TRUE;
+				 $filename = "S/$SetID.gif";
+			   }
+			   else if($imageinfo['has_jpg'] !=0)
+			   { // Använd JPG om den finns
+				 $filename = "S/$SetID.jpg";
+				 $hasimg=TRUE;
+			   }
+			   
+			   else
+			   { // Om ingen format finns skriv ut text 
+				 $hasimg=FALSE;
+				 $filename = "noimage_small.png";
+			   }
+			  
+			   print("<td>$filename</td>");
+			   if($hasimg==TRUE)
+				print("<td><img src=\"$prefix$filename\" alt=\"NO image\"/></td>");
+			   else
+					print('<td><img src="'.$filename.'" alt="'.$ItemID.'"/></td>');
 			   
 			   print("<td><a href='http://www.student.itn.liu.se/~linsv482/projekt/parts.php?set=".$SetID."&offset=0'>".$SetID."</a></td>");
 			   print("<td><a href='http://www.student.itn.liu.se/~linsv482/projekt/parts.php?set=".$SetID."&offset=0'>".$SetName."</a></td>");
@@ -93,6 +125,6 @@ $linknext="http://www.student.itn.liu.se/~linsv482/projekt/sets.php?set=".$origi
 // print("<a href='http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset-20)."'>Föregående</a>");
  //print("<a href='http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset+20)."'>Nästa</a>");
  
-//header("Location: index.php",true,301);
+//header("Location: hem.php",true,301);
 //exit();	
 ?>
