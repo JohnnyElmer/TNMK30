@@ -140,6 +140,6 @@ $linknext="http://www.student.itn.liu.se/~linsv482/projekt/parts.php?set=".$orig
 // print("<a href='http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset-20)."'>Föregående</a>");
  //print("<a href='http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset+20)."'>Nästa</a>");
  
-//header("Location: hem.php",true,301);
+//header("Location: index.php",true,301);
 //exit();	
 ?>
