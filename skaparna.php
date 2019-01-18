@@ -1,40 +1,40 @@
 <!doctype html>
 
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>LEGO-Databasen</title>
-	<link href="Lego.css" media="screen" rel="stylesheet" type="text/css"/>
-	<script src="buttons.js"></script>
-</head>
-<body>
-<div id="container">
-<a href="index.php">
-	<div id="logo">
-		<h1>LEGO-Databasen</h1>
-	</div>
-</a>
+	<?php include 'header_search.php'; ?>
+
+<div id="ruta">
+	<h2>MT1a</h2>
+	<div class="makers">
+	<img class="makerspng" src="img/johnny_elmer.png">
+	<p>Johnny Elmér</p>
+	<p>jonel107@student.liu.se</p>
+</div>
+	<div class="makers">
+	<img class="makerspng" src="img/chamoun_chamoun.png">
+	<p>Chamoun Chamoun</p>
+	<p>chach226@student.liu.se</p>
+</div>
 </div>
 
-<div id="searchbar">
-	<?php include 'formuler.php'; ?>
+<div id="ruta">
+	<h2>MT1b</h2>
+	<div class="makers">
+	<img class="makerspng" src="img/linnea_svensson.png">
+	<p>Linnéa Svensson</p>
+	<p>kinsv482@student.liu.se</p>
+
 </div>
-<div id="tabelldiv">
-	<p>Lego är det bästa jag vet.</p>
-	<div id="tabellinneholl">
-		<p>Resultattabell</p>
-		<?php
-		include 'search.php';
-		
-		?>
-	</div>
+	<div class="makers">
+	<img class="makerspng" src="img/ramez_rizek.png">
+	<p>Ramez Rizek</p>
+	<p>ramri882@student.liu.se</p>
+
+</div>
 </div>
 
 <div id="sidfot">
 	
 	<?php include 'sidfot.php'; ?>
-	
-	
 	
 </div>
 </body>
