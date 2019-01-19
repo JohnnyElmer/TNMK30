@@ -1,6 +1,7 @@
 
 <?php
-	
+
+//Hämtar informationen från formuler.php
 $offset= $_GET['offset'];
 $lim=$_GET['antal'];
 $totalt=0;
@@ -25,6 +26,7 @@ $SetID =  $_GET['set'];
 $originalsokning=$SetID;
 if($SetID!="")
 {	
+	//Databasfråga då "nästa" knappen blir tryckt
 	$enframot_query= "SELECT inventory.Quantity, inventory.ItemTypeID, inventory.ItemID, inventory.SetID, colors.ColorID,colors.Colorname, parts.Partname, sets.Setname  
 			FROM (((parts INNER JOIN inventory ON parts.PartID=inventory.ItemID) 
 			INNER JOIN colors ON colors.ColorID=inventory.ColorID) 
@@ -50,8 +52,6 @@ if($SetID!="")
 $harmer=mysqli_num_rows($harnesta);
 $totalt=mysqli_num_rows($contents);
 
-	echo "Visar resultat nummer ".$offset." till ".($offset+$totalt).". Delar som ingår i setet:";
-
 	
 	 if($totalt == 0)
 	 {
@@ -60,7 +60,8 @@ $totalt=mysqli_num_rows($contents);
 	 
 	else
 	{
-		 
+		echo "Visar resultat nummer ".$offset." till ".($offset+$totalt).". Delar som ingår i setet:"; 
+		
 		// Skriver ut tabell 
 		  print("<table>\n<tr>");	
 		  print("<th>Bild</th>");		  
@@ -135,12 +136,3 @@ $linknext="http://www.student.itn.liu.se/~linsv482/projekt/parts.php?set=".$orig
 <button onclick="window.location.href = '<?PHP echo $linkprevious; ?>';" <?PHP if($offset<=0 || ($offset-$lim) <0) echo "disabled" ?>>Föregående</button>
 <button onclick="window.location.href = '<?PHP echo $linknext; ?>';" <?PHP if($harmer<1) echo "disabled" ?>>Nästa</button>
 
-
-
- <?PHP
-// print("<a href='http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset-20)."'>Föregående</a>");
- //print("<a href='http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset+20)."'>Nästa</a>");
- 
-//header("Location: hem.php",true,301);
-//exit();	
-?>
