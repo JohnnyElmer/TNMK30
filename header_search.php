@@ -2,9 +2,10 @@
 	<meta charset="utf-8">
 	<title>LEGO-Databasen</title>
 	<link href="Lego.css" media="screen" rel="stylesheet" type="text/css"/>
+	<script src="script.js"></script>
 </head>
 
-<body>
+<body onload="showSlides()">
 <div id="container">
 <a href="index.php">
 	<div id="logo">
