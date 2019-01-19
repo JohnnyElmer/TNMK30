@@ -96,7 +96,7 @@ body{
 
 .makers {
 
-	float: left;
+	verticle-align: middle;
 	text-align: center;
 	width: 50%;
     	margin-left: auto;
