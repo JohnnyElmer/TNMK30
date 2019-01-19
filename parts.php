@@ -6,7 +6,7 @@
 <div id="tabelldiv">
 	<p>Lego är det bästa jag vet.</p>
 	<div id="tabellinneholl">
-		<p>Resultattabell</p>
+		<h2>Resultattabell</h2>
 		<?php
 		include 'search_parts.php';
 		
