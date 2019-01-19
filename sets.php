@@ -7,7 +7,7 @@
 <div id="tabelldiv"> <!-- div to hold a table -->
 	
 	<div id="tabellinneholl"> <!-- link for css -->
-		<p>Resultattabell</p> 
+		<h2>Resultattabell</h2>
 		<!-- includes a file that sends a question to the lego-database and creates a table with the answer -->
 		<?php
 		include 'search_sets.php';
