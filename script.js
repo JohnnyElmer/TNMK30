@@ -1,3 +1,6 @@
+/* all code in script.js is taken from the following website:
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto*/
+
 var slideIndex = 0;
 showSlides();
 
