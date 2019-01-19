@@ -5,7 +5,7 @@
 	<?php include 'header_search.php'; ?>
 	
 <div id="tabelldiv"> <!-- div to hold a table -->
-	<p>Lego är det bästa jag vet.</p>
+	
 	<div id="tabellinneholl"> <!-- link for css -->
 		<p>Resultattabell</p> 
 		<!-- includes a file that sends a question to the lego-database and creates a table with the answer -->
