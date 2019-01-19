@@ -5,8 +5,9 @@
 	<script src="script.js"></script>
 </head>
 
-<body onload="showSlides()">
-<div id="container">
+<!-- onload starts as soon as webpage opens, connects to script.js -->
+<body onload="showSlides()"> 
+<div id="container"> <!-- contains header and home button -->
 <a href="index.php">
 	<div id="logo">
 		<h1>LEGO-Databasen</h1>
@@ -14,6 +15,6 @@
 </a>
 </div>
 
-<div id="searchbar">
+<div id="searchbar"> <!-- includes file that has the searchbar-->
 	<?php include 'formuler.php'; ?>
 </div>
