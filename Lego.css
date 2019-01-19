@@ -116,11 +116,11 @@ body
 /*properties for the divs containing info about creaters*/
 .ruta
 {
-	border: solid 5px rgb(180,180,180);
+	border: solid 1px rgb(180,180,180);
 	background-color: rgb(200,200,200);
 	min-height:90%; 
 	margin: auto;
-	width: 50%;
+	width: 49.4%;
 	float: left;
 	text-align: center;
 	color: midnightblue;
