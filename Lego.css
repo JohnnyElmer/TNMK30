@@ -14,7 +14,7 @@ body{
 	height:100%;
 	margin-bottom: 60%;
 }
-
+/*properties for div of logo */
 #container{
 	text-align:center;
 	width: 100%;
@@ -23,16 +23,8 @@ body{
 	box-sizing: border-box;
 }
 
-#logo{
-	text-align: center;
-	border: solid 5px rgb(130,0,0);
-	background-color: RGB(180, 0, 0);
-	display:inline-block;
-	margin: 10px;
-}
-
-#logo
-{
+/*properties for logo, inline-block sets size of box relative to text */
+#logo {
 	text-align: center;
 	border: solid 5px rgb(130,0,0);
 	background-color: RGB(180, 0, 0);
@@ -44,14 +36,14 @@ body{
 {
 	background-color:blue;
 }
-
+/*properties for div of searchbar*/
 #searchbar{
 	border: solid 5px green;
 	text-align: center;
 	background-color: rgb(0,150,0);
 	padding:2.5%;
 }
-
+/*properties for div of body, min-height adjust the size of div relative to the results table*/
 #tabelldiv{
 	
 	border: solid 5px rgb(180,180,180);
@@ -60,14 +52,14 @@ body{
 	min-height:71.5%;  
 	margin-bottom: 15%;
 }
-
+/*properties for div of results table*/
 #tabellinneholl
 {
 	background-color:rgb(180,180,180);
 	display:inline-block;
 }
-
-#sidfot{
+/*properties for footer of site. bottom, right and left are margins*/
+#sidfot {
 	border: solid 5px rgb(150,0,0);
 	padding:1.8%;
 	background-color:rgb(180,0,0);
@@ -76,45 +68,35 @@ body{
 	right:0;
 	left:0;
 }
-.cirkeldiv
-{
-	  height:100px;
-	  width:100px;
-	  float: left;
-      border-radius: 50%;
-      background:  rgb(0,150,0);
-	  text-align:center;
-	  display:table-cell;
-	  vertical-align:middle;
-	  margin: 10px;
-	  border: solid green 5px;
+/*properties for buttons in footer. border radius changes the shape to circle. */
+.cirkeldiv {
+	height:100px;
+	width:100px;
+	float: left;
+	border-radius: 50%;
+      	background:  rgb(0,150,0);
+	text-align:center;
+	display:table-cell;
+	vertical-align:middle;
+	margin: 10px;
+	border: solid green 5px;
 }
 
 .cirkeldiv:hover{
 	background-color:blue;
 	color: white;
 }
-* {box-sizing:border-box}
-
+/*properties for makers page*/
 .makers {
-
-	
 	vertical-align: middle;
 	text-align: center;
 	width: 50%;
-    margin-left: auto;
+    	margin-left: auto;
 	margin-right: auto;
 	display: block;
-
-    
 }
-img.makers {
-    
-    background-color: white;
-    
-}
-
-#ruta{
+/*this al*/
+.ruta{
 	border: solid 5px rgb(180,180,180);
 	background-color: rgb(200,200,200);
 	min-height:90%; 
@@ -139,16 +121,9 @@ img.makers {
 	margin-top: 20px;
 }
 
-/*Slideshow css börjar här!*/
-* {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
+/*Following code was taken from the link below*/
+/*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto */
 
-.numbertext
-{
-	width:100%;
-}
 
 #dots
 {
