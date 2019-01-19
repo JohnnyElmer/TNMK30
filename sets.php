@@ -8,7 +8,7 @@
 	
 	<div id="tabellinneholl"> <!-- link for css -->
 		<h2>Resultattabell</h2>
-		<!-- includes a file that sends a question to the lego-database and creates a table with the answer -->
+		<!-- includes file with database question related to sets. returns result -->
 		<?php
 		include 'search_sets.php';
 		?>
