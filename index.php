@@ -7,7 +7,8 @@
 
 
 <div id="pics"> <!-- helps centre the slideshow on page -->
-
+<!--Lines 11-48 are taken from the source below-->
+<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto -->
 <div class="slideshow-container"> <!-- only contains images -->
 
 <div class="mySlides fade">
