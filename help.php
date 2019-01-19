@@ -1,12 +1,10 @@
 <!doctype html>
 
 <html>
+	<!-- includes a file containing header and searchbar -->
 	<?php include 'header_search.php'; ?>
-	
-<div> <a href="search.php"></a>
-</div >
 
-<div id="instruktioner">
+<div id="instruktioner">  <!-- div to help with centering of text -->
 	<h2>Såhär funkar sökfunktionen</h2>
 		<p>Klicka på sökrutan och skriv in antingen ett namn på en sats (bokstäver)
 		eller satsid (siffror). Du behöver inte vara orolig om du inte vet det fulla namnet
@@ -25,13 +23,9 @@
  
 </div>
 
-
-
-
-
-
 <div id="sidfot">
-	
+
+<!-- includes a file containing the footer -->
 <?php include 'sidfot.php'; ?>
 	
 </div>
