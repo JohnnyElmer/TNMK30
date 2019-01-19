@@ -9,6 +9,6 @@
 	
 	<a href="help.php"> <!-- sends to page that explains the search function -->
 	<div class="cirkeldiv" >
-		<p id="Sökhjälp"><br>try</p>
+		<p id="Sökhjälp"><br>Sökhjälp</p>
 	</div>
 	</a>
