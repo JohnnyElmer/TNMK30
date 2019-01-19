@@ -50,25 +50,24 @@ if($SetID!="")
 $harmer=mysqli_num_rows($harnesta);
 $totalt=mysqli_num_rows($contents);
 
-	echo "Visar resultat nummer ".$offset." till ".($offset+$totalt).". Har nästa: ".$harmer;
+	echo "Visar resultat nummer ".$offset." till ".($offset+$totalt).". Delar som ingår i setet:";
 
 	
 	 if($totalt == 0)
 	 {
-	  print("<p>No parts in inventory for this set.</p>\n");
+	  print("<p>Det finns inga bitar i det här setet.</p>\n");
 	 } 
 	 
 	else
 	{
 		 
 		// Skriver ut tabell 
-		  print("<p>Parts in set:</p>");
 		  print("<table>\n<tr>");	
-		  print("<th>Picture</th>");		  
-		  print("<th>Set ID</th>");
-		  print("<th>Part Name</th>");
-		  print("<th>Quantity</th>");
-		  print("<th>Color</th>");
+		  print("<th>Bild</th>");		  
+		  print("<th>Set-ID</th>");
+		  print("<th>Bitens namn</th>");
+		  print("<th>Kvantitet</th>");
+		  print("<th>Färg</th>");
 		  print "</tr>\n";
 		  
 		
