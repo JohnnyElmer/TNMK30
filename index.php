@@ -11,17 +11,17 @@
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="img/crain.png" style="width:100%">
+  <img src="img/baby_stormtrooper.jpg">
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="img/batman.png" style="width:100%">
+  <img src="img/elephant.jpg">
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="img/lego.png" style="width:100%">
+  <img src="img/parts.jpg">
 </div>
 
 </div>
