@@ -54,7 +54,7 @@
 <div id="sidfot"> 
 	
 <!-- includes a file containing the footer -->	
-<?PHP include 'sidfot.php'; ?>
+<?php include 'sidfot.php'; ?>
 		
 </div>
 </body>
