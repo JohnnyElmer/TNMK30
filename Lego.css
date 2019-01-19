@@ -4,18 +4,23 @@ h1{
 	color: Yellow;
 }
 
-html{
+html
+{
 	height:90%;
 }
 
-body{
+body
+{
 	background-color: RGB(180, 180, 180);
 	margin:0px;
 	height:100%;
 	margin-bottom: 60%;
 }
-/*properties for div of logo */
-#container{
+
+/*lin 22-53 connected to header_search.php*/
+/*properties of div containing logotype-div */
+#container
+{
 	text-align:center;
 	width: 100%;
 	background-color: RGB(180, 0, 0);
@@ -23,8 +28,9 @@ body{
 	box-sizing: border-box;
 }
 
-/*properties for logo, inline-block sets size of box relative to text */
-#logo {
+/*properties logotype-div, inline-block makes size of div relative to text */
+#logo 
+{
 	text-align: center;
 	border: solid 5px rgb(130,0,0);
 	background-color: RGB(180, 0, 0);
@@ -36,14 +42,17 @@ body{
 {
 	background-color:blue;
 }
-/*properties for div of searchbar*/
-#searchbar{
+
+/*properties for searchbar-div*/
+#searchbar
+{
 	border: solid 5px green;
 	text-align: center;
 	background-color: rgb(0,150,0);
 	padding:2.5%;
 }
-/*properties for div of body, min-height adjust the size of div relative to the results table*/
+/*lines 56-70 connected to sets.php and parts.php*/
+/*properties of main div conatining slideshow, tabels and text.*/
 #tabelldiv{
 	
 	border: solid 5px rgb(180,180,180);
@@ -52,14 +61,18 @@ body{
 	min-height:71.5%;  
 	margin-bottom: 15%;
 }
-/*properties for div of results table*/
+
+/*properties of results table-div*/
 #tabellinneholl
 {
 	background-color:rgb(180,180,180);
 	display:inline-block;
 }
-/*properties for footer of site. bottom, right and left are margins*/
-#sidfot {
+
+/*lines 74-104 connected to sidfot.php */
+/*properties of the footer. bottom, right and left stretches div to the edges of the screen*/
+#sidfot 
+{
 	border: solid 5px rgb(150,0,0);
 	padding:1.8%;
 	background-color:rgb(180,0,0);
@@ -68,7 +81,8 @@ body{
 	right:0;
 	left:0;
 }
-/*properties for buttons in footer. border radius changes the shape to circle. */
+
+/*properties for buttons in footer. border radius shapes div into a circle. */
 .cirkeldiv {
 	height:100px;
 	width:100px;
@@ -82,10 +96,13 @@ body{
 	border: solid green 5px;
 }
 
-.cirkeldiv:hover{
+.cirkeldiv:hover
+{
 	background-color:blue;
 	color: white;
 }
+
+/*lines 107-134 connected to skaparna.php*/
 /*properties for makers page*/
 .makers {
 	vertical-align: middle;
@@ -95,8 +112,10 @@ body{
 	margin-right: auto;
 	display: block;
 }
-/*this al*/
-.ruta{
+
+/*properties for the divs containing info about creaters*/
+.ruta
+{
 	border: solid 5px rgb(180,180,180);
 	background-color: rgb(200,200,200);
 	min-height:90%; 
@@ -106,7 +125,14 @@ body{
 	text-align: center;
 	color: midnightblue;
 }
+/*Adjusts the size and placement of photos of creators*/
+.makerspng
+{
+	width: 95%;
+	margin-top: 20px;
+}
 
+/*lines 137-144 connected to help.php */
 #instruktioner
 {
 	text-align: center;
@@ -116,12 +142,8 @@ body{
 	
 }
 
-.makerspng{
-	width: 95%;
-	margin-top: 20px;
-}
-
-/*Following code was taken from the link below*/
+/***************************************************************************************/
+/*The following code was taken from the link below, and is connected to script.js and the slideshow on index.php*/
 /*https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto */
 
 
@@ -131,14 +153,16 @@ body{
 }
 
 /* Slideshow container */
-.slideshow-container {
+.slideshow-container 
+{
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.dot 
+{
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -148,24 +172,28 @@ body{
   transition: background-color 0.6s ease;
 }
 
-.active {
+.active 
+{
   background-color: #717171;
 }
 
 /* Fading animation */
-.fade {
+.fade 
+{
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
+@-webkit-keyframes fade 
+{
   from {opacity: .4} 
   to {opacity: 1}
 }
 
-@keyframes fade {
+@keyframes fade 
+{
   from {opacity: .4} 
   to {opacity: 1}
 }
