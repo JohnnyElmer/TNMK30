@@ -39,23 +39,22 @@ if($SetID!="")
 $harmer=mysqli_num_rows($harnesta);
 $totalt=mysqli_num_rows($contents);
 
-	echo "Visar resultat nummer ".$offset." till ".($offset+$totalt).". Har nästa: ".$harmer;
+	echo "Visar resultat nummer ".$offset." till ".($offset+$totalt).". Matchande set:";
 
 	
 	 if($totalt == 0)
 	 {
-	  print("<p>No parts in inventory for this set.</p>\n");
+	  print("<p>Det finns inga set med det namnet eller ID:t. </p>\n");
 	 } 
 	 
 	else
 	{
 		 
 		// Skriver ut tabell 
-		  print("<p>Parts in set:</p>");
 		  print("<table>\n<tr>");
 		  print("<th>Bild</th>");
-		  print("<th>Set ID</th>");
-		  print("<th>Set Name</th>");
+		  print("<th>Set-ID</th>");
+		  print("<th>Setnamn</th>");
 		  print "</tr>\n";
 		  
 		
@@ -98,8 +97,8 @@ $totalt=mysqli_num_rows($contents);
 			   else
 					print('<td><img src="'.$filename.'" alt="'.$ItemID.'"/></td>');
 			   
-			   print("<td><a href='http://www.student.itn.liu.se/~linsv482/projekt/parts.php?set=".$SetID."&offset=0'>".$SetID."</a></td>");
-			   print("<td><a href='http://www.student.itn.liu.se/~linsv482/projekt/parts.php?set=".$SetID."&offset=0'>".$SetName."</a></td>");
+			   print("<td><a href='http://www.student.itn.liu.se/~linsv482/projekt/parts.php?set=".$SetID."&offset=0&antal=".$lim."'>".$SetID."</a></td>");
+			   print("<td><a href='http://www.student.itn.liu.se/~linsv482/projekt/parts.php?set=".$SetID."&offset=0&antal=".$lim."'>".$SetName."</a></td>");
 			   print("</tr>\n");
 		  }
 		  print("</table>\n");
