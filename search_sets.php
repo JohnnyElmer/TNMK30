@@ -1,6 +1,7 @@
 
 <?php
-	
+
+//Hämtar informationen från formuler.php
 $offset= $_GET['offset'];
 $lim=$_GET['antal'];
 $totalt=0;
@@ -25,6 +26,7 @@ $SetID =  $_GET['set'];
 $originalsokning=$SetID;
 if($SetID!="")
 {	
+	//Databasfråga då "nästa" knappen blir tryckt
 	$enframot_query= "SELECT sets.Setname, sets.SetID FROM sets
 			WHERE (sets.SetID LIKE '%".$SetID."%' OR sets.Setname LIKE '%".$SetID."%')
 			LIMIT ".($offset+$lim).",1";
@@ -38,9 +40,6 @@ if($SetID!="")
 	
 $harmer=mysqli_num_rows($harnesta);
 $totalt=mysqli_num_rows($contents);
-
-	echo "Visar resultat nummer ".$offset." till ".($offset+$totalt).". Matchande set:";
-
 	
 	 if($totalt == 0)
 	 {
@@ -49,7 +48,8 @@ $totalt=mysqli_num_rows($contents);
 	 
 	else
 	{
-		 
+		echo "Visar resultat nummer ".$offset." till ".($offset+$totalt).". Matchande set:"; 
+		
 		// Skriver ut tabell 
 		  print("<table>\n<tr>");
 		  print("<th>Bild</th>");
@@ -114,12 +114,3 @@ $linknext="http://www.student.itn.liu.se/~linsv482/projekt/sets.php?set=".$origi
 <button onclick="window.location.href = '<?PHP echo $linkprevious; ?>';" <?PHP if($offset<=0 || ($offset-$lim) <0) echo "disabled" ?>>Föregående</button>
 <button onclick="window.location.href = '<?PHP echo $linknext; ?>';" <?PHP if($harmer<1) echo "disabled" ?>>Nästa</button>
 
-
-
- <?PHP
-// print("<a href='http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset-20)."'>Föregående</a>");
- //print("<a href='http://www.student.itn.liu.se/~linsv482/projekt/hem.php?set=".$originalsokning."&offset=".($offset+20)."'>Nästa</a>");
- 
-//header("Location: hem.php",true,301);
-//exit();	
-?>
