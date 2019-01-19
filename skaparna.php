@@ -1,8 +1,8 @@
 <!doctype html>
-
+	<!-- includes a file containing header and searchbar -->
 	<?php include 'header_search.php'; ?>
 
-<div id="ruta">
+<div class="ruta"> <!-- contains info of creators from mt1a -->	
 	<h2>MT1a</h2>
 	<div class="makers">
 	<img class="makerspng" src="img/johnny_elmer.png">
@@ -16,7 +16,7 @@
 </div>
 </div>
 
-<div id="ruta">
+<div class="ruta"> <!-- contains info of creators from mt1b -->	
 	<h2>MT1b</h2>
 	<div class="makers">
 	<img class="makerspng" src="img/linnea_svensson.png">
@@ -34,6 +34,7 @@
 
 <div id="sidfot">
 	
+	<!-- includes a file containing the footer -->	
 	<?php include 'sidfot.php'; ?>
 	
 </div>
