@@ -21,7 +21,7 @@
 	<div class="makers">
 	<img class="makerspng" src="img/linnea_svensson.png">
 	<p>Linnéa Svensson</p>
-	<p>kinsv482@student.liu.se</p>
+	<p>linsv482@student.liu.se</p>
 
 </div>
 	<div class="makers">
