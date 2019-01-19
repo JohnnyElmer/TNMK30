@@ -50,8 +50,9 @@
 </div>
 </div>
 
-<div id="sidfot"> <!-- includes a file containing the footer -->
+<div id="sidfot"> 
 	
+<!-- includes a file containing the footer -->	
 <?PHP include 'sidfot.php'; ?>
 		
 </div>
